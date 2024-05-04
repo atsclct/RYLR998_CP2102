@@ -136,7 +136,6 @@ async def main():
 
     # Perform operations after ensuring protocol is fully ready
     await asyncio.sleep(2)  # Wait for the device to be fully ready
-    await protocol.send("Hello LoRa", addr=1)
     while True:
         packet = await protocol.recv_packet()
         print(packet)
